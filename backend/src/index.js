@@ -9,7 +9,7 @@ const app = express();
 // Middleware
 app.use(helmet());
 app.use(cors({ 
-  origin: process.env.CORS_ORIGIN || 'http://vgk-perv.ru:27015',
+  origin: process.env.CORS_ORIGIN || 'https://vgk-perv.ru',
   credentials: true
 }));
 app.use(morgan('dev'));

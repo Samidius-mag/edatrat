@@ -78,8 +78,11 @@ docker compose up -d
 ```
 
 Приложение будет доступно:
-- Frontend: http://vgk-perv.ru:27015 (или http://localhost:27015)
-- Backend API: http://localhost:3001 (или http://vgk-perv.ru:3001)
+- Frontend: https://vgk-perv.ru (через Nginx с HTTPS)
+- Backend API: https://vgk-perv.ru/api (через Nginx с HTTPS)
+- Локально: http://localhost:27015 (frontend), http://localhost:3001 (backend)
+
+**Для настройки HTTPS см. [docs/HTTPS_SETUP.md](docs/HTTPS_SETUP.md)**
 
 Данные хранятся в JSON файлах в директории `backend/data/`
 

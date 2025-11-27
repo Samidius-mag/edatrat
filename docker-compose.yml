@@ -7,11 +7,12 @@ services:
       dockerfile: Dockerfile
     container_name: edatrat-backend
     environment:
-      NODE_ENV: development
+      NODE_ENV: production
       DATA_DIR: /app/data
       PORT: 3001
+      CORS_ORIGIN: https://vgk-perv.ru
     ports:
-      - "3001:3001"
+      - "3001:3001"  # Только для локального доступа, внешний доступ через Nginx на 443
     volumes:
       - ./backend:/app
       - ./backend/data:/app/data
@@ -24,9 +25,9 @@ services:
       dockerfile: Dockerfile
     container_name: edatrat-frontend
     environment:
-      VITE_API_URL: http://vgk-perv.ru:3001
+      VITE_API_URL: https://vgk-perv.ru/api
     ports:
-      - "27015:27015"
+      - "27015:27015"  # Только для локального доступа, внешний доступ через Nginx на 443
     volumes:
       - ./frontend:/app
       - /app/node_modules
