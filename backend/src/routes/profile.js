@@ -1,18 +1,35 @@
 const express = require('express');
 const router = express.Router();
 const storage = require('../services/storage');
+const { authenticateToken } = require('../middleware/auth');
+
+// Все маршруты требуют аутентификации
+router.use(authenticateToken);
 
 // Получить профиль пользователя
 router.get('/', async (req, res) => {
   try {
-    // TODO: Получить user_id из JWT токена
-    const userId = req.user?.id || 1; // Временная заглушка
+    const userId = req.user.id;
     
     const profiles = await storage.getAll('user_profiles');
     const profile = profiles.find(p => p.user_id === userId);
     
     if (!profile) {
-      return res.status(404).json({ error: 'Profile not found' });
+      // Создаем профиль по умолчанию, если его нет
+      const newProfile = await storage.create('user_profiles', {
+        user_id: userId,
+        family_size: 1,
+        children_ages: [],
+        goals: [],
+        allergies: [],
+        religious_restrictions: [],
+        dislikes: [],
+        cuisine_style: 'russian',
+        cooking_time: 'medium',
+        budget_per_week: 3000,
+        region: 'moscow',
+      });
+      return res.json(newProfile);
     }
     
     res.json(profile);
@@ -25,13 +42,18 @@ router.get('/', async (req, res) => {
 // Обновить профиль пользователя
 router.put('/', async (req, res) => {
   try {
-    const userId = req.user?.id || 1; // Временная заглушка
+    const userId = req.user.id;
     
     const profiles = await storage.getAll('user_profiles');
     const profileIndex = profiles.findIndex(p => p.user_id === userId);
     
     if (profileIndex === -1) {
-      return res.status(404).json({ error: 'Profile not found' });
+      // Создаем профиль, если его нет
+      const newProfile = await storage.create('user_profiles', {
+        user_id: userId,
+        ...req.body,
+      });
+      return res.json(newProfile);
     }
     
     const updatedProfile = {

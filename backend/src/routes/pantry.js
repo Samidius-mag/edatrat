@@ -1,11 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const storage = require('../services/storage');
+const { authenticateToken } = require('../middleware/auth');
+
+router.use(authenticateToken);
 
 // Получить список продуктов в холодильнике
 router.get('/', async (req, res) => {
   try {
-    const userId = req.user?.id || 1; // Временная заглушка
+    const userId = req.user.id;
     
     const items = await storage.find('pantry_items', item => item.user_id === userId);
     
@@ -30,7 +33,7 @@ router.get('/', async (req, res) => {
 // Добавить продукт в холодильник
 router.post('/', async (req, res) => {
   try {
-    const userId = req.user?.id || 1; // Временная заглушка
+    const userId = req.user.id;
     
     const item = await storage.create('pantry_items', {
       user_id: userId,
@@ -47,7 +50,7 @@ router.post('/', async (req, res) => {
 // Обновить продукт в холодильнике
 router.put('/:id', async (req, res) => {
   try {
-    const userId = req.user?.id || 1; // Временная заглушка
+    const userId = req.user.id;
     const itemId = parseInt(req.params.id);
     
     const item = await storage.getById('pantry_items', itemId);
@@ -67,7 +70,7 @@ router.put('/:id', async (req, res) => {
 // Удалить продукт из холодильника
 router.delete('/:id', async (req, res) => {
   try {
-    const userId = req.user?.id || 1; // Временная заглушка
+    const userId = req.user.id;
     const itemId = parseInt(req.params.id);
     
     const item = await storage.getById('pantry_items', itemId);

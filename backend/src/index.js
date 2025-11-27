@@ -21,10 +21,11 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'ЕмПоСезону API is running' });
 });
 
-// API Routes (будут добавлены)
+// API Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/profile', require('./routes/profile'));
 app.use('/api/recipes', require('./routes/recipes'));
+app.use('/api/products', require('./routes/products'));
 app.use('/api/menu', require('./routes/menu'));
 app.use('/api/pantry', require('./routes/pantry'));
 app.use('/api/shopping-list', require('./routes/shopping-list'));

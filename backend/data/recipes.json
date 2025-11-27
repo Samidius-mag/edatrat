@@ -93,6 +93,155 @@
     ],
     "tags": ["quick", "vegetarian", "seasonal"],
     "created_at": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "name": "Каша овсяная",
+    "description": "Классический завтрак",
+    "cooking_time": 10,
+    "difficulty": "easy",
+    "servings": 2,
+    "calories_per_serving": 200,
+    "steps": [
+      "Вскипятить молоко",
+      "Добавить овсяные хлопья",
+      "Варить 5 минут",
+      "Добавить сахар по вкусу"
+    ],
+    "ingredients": [
+      {
+        "product_id": 10,
+        "product_name": "Молоко",
+        "amount": 0.5,
+        "unit": "л"
+      }
+    ],
+    "tags": ["quick", "breakfast", "vegetarian"],
+    "created_at": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "name": "Творожная запеканка",
+    "description": "Полезный завтрак или десерт",
+    "cooking_time": 45,
+    "difficulty": "medium",
+    "servings": 6,
+    "calories_per_serving": 180,
+    "steps": [
+      "Смешать творог с яйцами и сахаром",
+      "Добавить манку",
+      "Выложить в форму",
+      "Запекать 30 минут при 180°C"
+    ],
+    "ingredients": [
+      {
+        "product_id": 11,
+        "product_name": "Творог",
+        "amount": 0.5,
+        "unit": "кг"
+      },
+      {
+        "product_id": 13,
+        "product_name": "Яйца",
+        "amount": 3,
+        "unit": "шт"
+      }
+    ],
+    "tags": ["breakfast", "vegetarian"],
+    "created_at": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "name": "Гречка с мясом",
+    "description": "Сытное блюдо на обед",
+    "cooking_time": 40,
+    "difficulty": "medium",
+    "servings": 4,
+    "calories_per_serving": 380,
+    "steps": [
+      "Отварить гречку",
+      "Обжарить мясо с луком",
+      "Смешать с гречкой",
+      "Тушить 10 минут"
+    ],
+    "ingredients": [
+      {
+        "product_id": 15,
+        "product_name": "Гречка",
+        "amount": 0.3,
+        "unit": "кг"
+      },
+      {
+        "product_id": 9,
+        "product_name": "Говядина",
+        "amount": 0.4,
+        "unit": "кг"
+      },
+      {
+        "product_id": 3,
+        "product_name": "Лук репчатый",
+        "amount": 0.2,
+        "unit": "кг"
+      }
+    ],
+    "tags": ["dinner", "lunch", "protein"],
+    "created_at": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "name": "Макароны с сыром",
+    "description": "Простое и вкусное блюдо",
+    "cooking_time": 20,
+    "difficulty": "easy",
+    "servings": 4,
+    "calories_per_serving": 320,
+    "steps": [
+      "Отварить макароны",
+      "Натереть сыр",
+      "Смешать макароны с сыром",
+      "Подавать горячим"
+    ],
+    "ingredients": [
+      {
+        "product_id": 16,
+        "product_name": "Макароны",
+        "amount": 0.4,
+        "unit": "кг"
+      },
+      {
+        "product_id": 12,
+        "product_name": "Сыр",
+        "amount": 0.2,
+        "unit": "кг"
+      }
+    ],
+    "tags": ["quick", "dinner", "lunch"],
+    "created_at": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 8,
+    "name": "Салат из помидоров",
+    "description": "Свежий летний салат",
+    "cooking_time": 5,
+    "difficulty": "easy",
+    "servings": 4,
+    "calories_per_serving": 60,
+    "steps": [
+      "Нарезать помидоры",
+      "Добавить зелень",
+      "Заправить маслом",
+      "Посолить по вкусу"
+    ],
+    "ingredients": [
+      {
+        "product_id": 5,
+        "product_name": "Помидоры",
+        "amount": 0.5,
+        "unit": "кг"
+      }
+    ],
+    "tags": ["quick", "vegetarian", "seasonal"],
+    "created_at": "2024-01-01T00:00:00.000Z"
   }
 ]
 
