@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "product_id": 1,
+    "product_name": "Картофель",
+    "region": "moscow",
+    "month": 9,
+    "is_seasonal": true,
+    "price_range_min": 25.00,
+    "price_range_max": 35.00
+  },
+  {
+    "id": 2,
+    "product_id": 1,
+    "product_name": "Картофель",
+    "region": "moscow",
+    "month": 10,
+    "is_seasonal": true,
+    "price_range_min": 25.00,
+    "price_range_max": 35.00
+  },
+  {
+    "id": 3,
+    "product_id": 4,
+    "product_name": "Капуста белокочанная",
+    "region": "moscow",
+    "month": 9,
+    "is_seasonal": true,
+    "price_range_min": 30.00,
+    "price_range_max": 45.00
+  },
+  {
+    "id": 4,
+    "product_id": 4,
+    "product_name": "Капуста белокочанная",
+    "region": "moscow",
+    "month": 10,
+    "is_seasonal": true,
+    "price_range_min": 30.00,
+    "price_range_max": 45.00
+  },
+  {
+    "id": 5,
+    "product_id": 6,
+    "product_name": "Яблоки",
+    "region": "moscow",
+    "month": 9,
+    "is_seasonal": true,
+    "price_range_min": 60.00,
+    "price_range_max": 90.00
+  },
+  {
+    "id": 6,
+    "product_id": 6,
+    "product_name": "Яблоки",
+    "region": "moscow",
+    "month": 10,
+    "is_seasonal": true,
+    "price_range_min": 60.00,
+    "price_range_max": 90.00
+  }
+]
+

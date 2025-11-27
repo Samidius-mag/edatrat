@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: edatrat-backend
+    environment:
+      NODE_ENV: development
+      DATA_DIR: /app/data
+      PORT: 3001
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend:/app
+      - ./backend/data:/app/data
+      - /app/node_modules
+    command: npm run dev
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: edatrat-frontend
+    environment:
+      REACT_APP_API_URL: http://localhost:3001/api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+

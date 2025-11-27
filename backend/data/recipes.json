@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Омлет с овощами",
+    "description": "Простой и полезный завтрак",
+    "cooking_time": 15,
+    "difficulty": "easy",
+    "servings": 2,
+    "calories_per_serving": 250,
+    "steps": [
+      "Нарезать овощи (помидоры, перец)",
+      "Взбить яйца с солью и перцем",
+      "Обжарить овощи на сковороде 3 минуты",
+      "Залить яйцами",
+      "Готовить на среднем огне 5 минут"
+    ],
+    "ingredients": [
+      {
+        "product_id": 13,
+        "product_name": "Яйца",
+        "amount": 4,
+        "unit": "шт"
+      },
+      {
+        "product_id": 5,
+        "product_name": "Помидоры",
+        "amount": 2,
+        "unit": "шт"
+      }
+    ],
+    "tags": ["quick", "breakfast", "vegetarian"],
+    "created_at": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "name": "Куриная грудка с рисом",
+    "description": "Классическое блюдо с курицей и рисом",
+    "cooking_time": 30,
+    "difficulty": "medium",
+    "servings": 4,
+    "calories_per_serving": 450,
+    "steps": [
+      "Отварить рис в подсоленной воде 15 минут",
+      "Нарезать куриную грудку кубиками",
+      "Обжарить курицу на сковороде 10 минут",
+      "Добавить специи",
+      "Подать курицу с рисом"
+    ],
+    "ingredients": [
+      {
+        "product_id": 8,
+        "product_name": "Куриная грудка",
+        "amount": 0.5,
+        "unit": "кг"
+      },
+      {
+        "product_id": 14,
+        "product_name": "Рис",
+        "amount": 0.3,
+        "unit": "кг"
+      }
+    ],
+    "tags": ["dinner", "protein"],
+    "created_at": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "name": "Салат из капусты",
+    "description": "Легкий овощной салат",
+    "cooking_time": 10,
+    "difficulty": "easy",
+    "servings": 4,
+    "calories_per_serving": 80,
+    "steps": [
+      "Нашинковать капусту тонкой соломкой",
+      "Натереть морковь на терке",
+      "Добавить соль и перемешать",
+      "Заправить растительным маслом"
+    ],
+    "ingredients": [
+      {
+        "product_id": 4,
+        "product_name": "Капуста белокочанная",
+        "amount": 0.5,
+        "unit": "шт"
+      },
+      {
+        "product_id": 2,
+        "product_name": "Морковь",
+        "amount": 2,
+        "unit": "шт"
+      }
+    ],
+    "tags": ["quick", "vegetarian", "seasonal"],
+    "created_at": "2024-01-01T00:00:00.000Z"
+  }
+]
+
