@@ -78,8 +78,8 @@ docker compose up -d
 ```
 
 Приложение будет доступно:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:3001
+- Frontend: http://vgk-perv.ru:27015 (или http://localhost:27015)
+- Backend API: http://localhost:3001 (или http://vgk-perv.ru:3001)
 
 Данные хранятся в JSON файлах в директории `backend/data/`
 

@@ -65,13 +65,15 @@ docker compose down -v
 
 ## Настройка Nginx (опционально, для production)
 
+Если используете Nginx как reverse proxy:
+
 ```nginx
 server {
     listen 80;
-    server_name your-domain.com;
+    server_name vgk-perv.ru;
 
     location / {
-        proxy_pass http://localhost:3000;
+        proxy_pass http://localhost:27015;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -87,6 +89,8 @@ server {
     }
 }
 ```
+
+Или можно напрямую использовать порт 27015 без Nginx.
 
 ## Обновление приложения
 

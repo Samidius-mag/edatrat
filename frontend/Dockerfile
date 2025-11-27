@@ -12,8 +12,8 @@ RUN npm install
 COPY . .
 
 # Открытие порта
-EXPOSE 3000
+EXPOSE 27015
 
 # Запуск dev сервера
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "27015"]
 

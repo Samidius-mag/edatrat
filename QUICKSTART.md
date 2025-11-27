@@ -51,7 +51,7 @@ docker compose up
 
 # Или локально (в разных терминалах):
 npm run dev:backend   # http://localhost:3001
-npm run dev:frontend  # http://localhost:3000
+npm run dev:frontend  # http://vgk-perv.ru:27015 или http://localhost:27015
 ```
 
 ## Что реализовано сейчас
