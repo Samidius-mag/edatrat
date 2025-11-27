@@ -6,6 +6,11 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 27015,
+    allowedHosts: [
+      'vgk-perv.ru',
+      'localhost',
+      '127.0.0.1',
+    ],
     proxy: {
       '/api': {
         target: process.env.VITE_API_URL || 'http://localhost:3001',
